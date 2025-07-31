@@ -2,3 +2,12 @@ Flask==3.0.3
 PyPDF2==3.0.1
 requests==2.31.0
 flask-cors==4.0.0
+
+# PyPDF2 can decrypt AES-encrypted PDFs if either pyca/cryptography
+# or pycryptodome is installed.  Without an AES backend, attempting
+# to parse a protected document results in a `DependencyError` like
+# "PyCryptodome is required for AES algorithm".  Installing
+# pycryptodome satisfies this optional dependency and allows the app
+# to handle encrypted PDFs【27142413809168†L86-L92】.  If you prefer
+# cryptography, replace this line with `cryptography>=41.0.0`.
+pycryptodome==3.23.0
