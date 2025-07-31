@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI PDF 閱讀器</title>
+    <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+    <div id="app">
+        <h1>AI PDF 閱讀器</h1>
+        <section id="upload-section">
+            <h2>上傳 PDF</h2>
+            <input type="file" id="pdfFile" accept="application/pdf" />
+            <button id="uploadBtn">上傳並解析</button>
+            <div id="upload-status"></div>
+        </section>
+
+        <section id="preview-section" style="display:none;">
+            <h2>文件預覽</h2>
+            <pre id="preview-text"></pre>
+        </section>
+
+        <section id="chat-section" style="display:none;">
+            <h2>問答區</h2>
+            <div id="chat-window"></div>
+            <div id="input-container">
+                <input type="text" id="questionInput" placeholder="輸入您的問題..." />
+                <button id="sendBtn">發送</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
